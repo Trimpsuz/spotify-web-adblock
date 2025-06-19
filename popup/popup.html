@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Spotify Web Adblock</title>
+    <link href="popup.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="../images/icon.png" class="icon" alt="Spotify Web Adblock" />
+      <div class="title">Spotify Web Adblock</div>
+    </div>
+
+    <div id="status" class="status inactive">There aren't any Spotify pages open. To see ads getting removed, open or refresh a Spotify web player page.</div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="overview">Overview</button>
+      <button class="tab" data-tab="logs">Activity Logs</button>
+    </div>
+
+    <div id="overview-tab" class="tab-content active">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" id="ads-blocked">0</div>
+          <div class="stat-label">Ads Blocked</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="session-time">0m</div>
+          <div class="stat-label">Session Time</div>
+        </div>
+      </div>
+      <div class="empty-state">
+        <div class="empty-icon">🎵</div>
+      </div>
+    </div>
+
+    <div id="logs-tab" class="tab-content">
+      <ul id="logList" class="log-list"></ul>
+      <div id="logs-empty" class="empty-state">
+        <div class="empty-icon">📋</div>
+        <div>No activity logs yet</div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
